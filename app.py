@@ -46,11 +46,11 @@ def get_vector_retriever():
 st.title('Constitution of Nepal')
 
 
-model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)
+model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
 
 prompt_template = PromptTemplate(
     input_variables=["context", "question"],
-    template="Based on the following context:\n{context}\nAnswer the question: in detail {question} if the answer is not in the context simply say i don't know"
+    template="Based on the following context:{context}\nAnswer the question: in detail in bullet points {question}\nif the answer is not in the context simply say i don't know"
 )
 
 retriever = get_vector_retriever()
