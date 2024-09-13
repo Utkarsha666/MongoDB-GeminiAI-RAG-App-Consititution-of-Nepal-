@@ -1,7 +1,8 @@
 ##Simple Example of RAG Application using MongoDB and Gemini API 
 Constitution of Nepal
 For educational purpose Free tier of Gemini and MongoDB used for this project
-![Screen-shot](image-1.png)
-![Agriculture](image.png)
+![agriculture](image.png)
+![human rights](image-1.png)
+
 
 Demo App:- https://constitutionofnepal.streamlit.app/

@@ -50,7 +50,7 @@ model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
 
 prompt_template = PromptTemplate(
     input_variables=["context", "question"],
-    template="Based on the following context:{context}\nAnswer the question: in detail in bullet points {question}\nif the answer is not in the context simply say i don't know"
+    template="Based on the following context:{context}\nAnswer the question: in detail in bullet points {question}\nprovide origional reference \nif the answer is not in the context simply say i don't know"
 )
 
 retriever = get_vector_retriever()
@@ -67,7 +67,7 @@ rag_chain = (
 question = st.text_input('Enter Topic:')
 if question:
     answer = rag_chain.invoke(question)
-    st.write(f'Response: {answer}')
+    st.write(answer)
 
 
 
