@@ -14,7 +14,7 @@ The Constitution of Nepal RAG application allows users to ask complex questions 
     - Retrieve relevant articles from the Constitution of Nepal using MongoDB.
 
     - Use Gemini for generating detailed and contextually aware answers.
-    
+
     - Provide a simple, user-friendly interface via Streamlit.
 
 # Features
@@ -31,8 +31,8 @@ The Constitution of Nepal RAG application allows users to ask complex questions 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/constitution-nepal-rag.git
-    cd constitution-nepal-rag
+    git clone https://github.com/Utkarsha666/MongoDB-GeminiAI-RAG-App-Consititution-of-Nepal-.git
+    cd MongoDB-GeminiAI-RAG-App-Consititution-of-Nepal-
 
 2. Set up a virtual environment (optional but recommended):
     ```bash
@@ -50,8 +50,8 @@ The Constitution of Nepal RAG application allows users to ask complex questions 
 
 5. Configure environment variables (create a .env file):
 
-    GEMINI_API_KEY=<your_gemini_api_key>
-    MONGO_URI=<your_mongo_db_uri>
+    - GEMINI_API_KEY=<your_gemini_api_key>
+    - MONGO_URI=<your_mongo_db_uri>
 
 6. Run the Streamlit app:
     ```bash
