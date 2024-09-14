@@ -39,18 +39,29 @@ def get_vector_retriever():
         collection=collection,
         index_name=ATLAS_VECTOR_SEARCH_INDEX_NAME
     )
-    retriever = vector_search.as_retriever(search_type='similarity', search_kwargs={'k': 1})
+    retriever = vector_search.as_retriever(search_type='similarity', search_kwargs={'k': 2})
 
     return retriever
 
 st.title('Constitution of Nepal')
 
 
-model = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.3)
+model = ChatGoogleGenerativeAI(model="gemini-1.5-pro", temperature=0.3)
+
+template = """
+    You are a legal assistant with expertise in the constitutional law of Nepal.\n\nYour task is to answer the following based only on the provided context: {context}\n\n
+    Answer the question: {question} in as much detail as possible, but only using information from the context provided.\n\n
+    When answering question:
+    1. Provide precise and accurate information based strictly on the retrieved documents.
+    2. Cite relevant articles or sections of the Constitution of Nepal.
+    3. Do not provide information that is not present in the retrieved documents, and avoid making any assumptions.
+    4. If the query is unclear or requires additional context, ask clarifying questions before providing an answer.
+"""
+
 
 prompt_template = PromptTemplate(
     input_variables=["context", "question"],
-    template="Based on the following context:{context}\nAnswer the question: in detail in bullet points {question}\nprovide origional reference \nif the answer is not in the context simply say i don't know"
+    template=template
 )
 
 retriever = get_vector_retriever()
