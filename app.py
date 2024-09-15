@@ -98,6 +98,7 @@ def run():
 placeholder = st.empty()
 
 with placeholder.container():
+    st.write("Password set by administrator to limit resource usages, Contact Administrator to get access")
     app_password = st.text_input("Enter password:", type="password")
 
 if st.button("Submit"):
