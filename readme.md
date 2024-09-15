@@ -2,9 +2,10 @@
 
 This project is a Retrieval-Augmented Generation (RAG) application designed to allow users to ask questions about the Constitution of Nepal. The application uses Gemini, and MongoDB to store and retrieve relevant articles or sections from the constitution. It is built using Streamlit for an interactive user interface.
 
-![agriculture](image-2.png)
-![citizenship](image.png)
-![right-to-dalit](image-1.png)
+![guidelines for NGO](image-2.png)
+![crime](image.png)
+![duties of citizen](image-1.png)
+!
 
 
 # Overview
